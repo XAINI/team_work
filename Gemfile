@@ -52,5 +52,4 @@ gem 'haml'
 gem 'mongoid', "6.0.0.beta"
 
 gem 'simple_form'
-gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.5'
