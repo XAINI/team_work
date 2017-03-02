@@ -1,11 +1,332 @@
 .new-event
-  %a.btn.btn-primary{href:"/test", style: "margin-top: 10px;margin-bottom: 20px;"} 返回
-  .team
-    %label
+  .top-district
+  .page-title
+    %label{style: "margin-top: 10px;font-family: Microsoft YaHei;font-size: 20px;"}
       %i.glyphicon.glyphicon-list-alt
       新建项目
-    %hr
-    .base-info
-      %span
-        %i.glyphicon.glyphicon-exclamation-sign 
-        基本信息
+  .event-table
+    %table.table
+      %tr
+        %td{colspan: "3"}
+          %span{style: "font-weight: bold;font-size: 18px;"}
+            %i.glyphicon.glyphicon-exclamation-sign 
+            基本信息
+      %tr
+        %td
+        %td
+          %span 项目编码
+          %input
+          %span{style: "color: red"} *
+        %td 
+          %span 项目简称
+          %input
+      %tr
+        %td
+        %td{colspan: "2"}
+          %span 项目名称
+          %input
+          %span{style: "color: red"} *
+      %tr
+        %td
+        %td
+          %span 项目模式
+          %select
+            %option 资源项目
+            %option 公共项目
+          %span{style: "color: red"} *
+        %td 
+          %span 项目类别
+          %select
+            %option 不指定
+            %option 事务性项目
+            %option 项目性项目
+            %option OEM
+      %tr
+        %td
+        %td
+          %span 执行部门
+          / TODO 模态框
+          %i.glyphicon.glyphicon-home{style: "z-index:2;position:relative;left:5px;"}
+          %select{style: "padding-left: 30px; position: relative; left: -20px;"}
+            %option 
+            %option 研发部
+            %option 设计部
+            %option 咨询部
+            %option 项目部
+
+        %td 
+          %span 项目主管
+          %i.glyphicon.glyphicon-user{style: "z-index:2;position:relative;left:5px;"}
+          %select{style: "padding-left: 30px; position: relative; left: -20px;"}
+            %option 
+            %option dm01
+            %option pm01
+            %option staff01
+            %option 普通员工
+      %tr
+        %td
+        %td
+          %span 项目经理
+          %i.glyphicon.glyphicon-user{style: "z-index:2;position:relative;left:5px;"}
+          %select{style: "padding-left: 30px; position: relative; left: -20px;"}
+            %option 
+            %option dm01
+            %option pm01
+            %option staff01
+            %option 普通员工
+        %td 
+          %span 项目助理
+          %i.glyphicon.glyphicon-user{style: "z-index:2;position:relative;left:5px;"}
+          %select{style: "padding-left: 30px; position: relative; left: -20px;"}
+            %option 
+            %option dm01
+            %option pm01
+            %option staff01
+            %option 普通员工
+      %tr
+        %td
+        %td
+          %span 销售
+          %i.glyphicon.glyphicon-user{style: "z-index:2;position:relative;left:5px;"}
+          %select{style: "padding-left: 30px; position: relative; left: -20px;"}
+            %option 
+            %option dm01
+            %option pm01
+            %option staff01
+            %option 普通员工
+        %td 
+          %span 客户
+          / TODO 模态框
+          %i.glyphicon.glyphicon-user{style: "z-index:2;position:relative;left:5px;"}
+          %input{style: "padding-left: 30px; position: relative; left: -20px;",data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+      %tr
+        %td
+        %td{colspan: "2"}
+          %span 优先级
+          %select
+            %option 不指定
+            %option 紧急
+            %option 较高
+            %option 高
+            %option 低
+            %option 较低
+            %option 不急
+      %tr
+        %td
+        %td{colspan: "2"}
+          %span 项目分类
+          / TODO 模态框
+          %button{data:{:toggle => "modal", :target =>".bs-example-modal-sm"}} 
+            %i.glyphicon.glyphicon-plus
+            添加
+      %tr
+        %td
+        %td{colspan: "2"}
+          %span 描述
+          %textarea{style:"width:600px;height:100px;resize:none;"}
+      %tr
+        %td
+        %td{colspan: "2"}
+          %span 排序编号
+          %input
+      %tr
+        %td
+        %td{colspan: "2"}
+          %span 创建人
+          %span{style: "font-weight: bold;"} Alan
+      %tr
+        %td{colspan: "3"}
+          %span{style: "font-weight: bold;font-size: 18px;"}
+            %i.glyphicon.glyphicon-cog
+            项目设置
+      %tr
+        %td
+        %td
+          %span 必须开始于
+          / TODO日历组件
+          %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+          %input{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker"}
+        %td 
+          %span 必须完成于
+          / TODO 日历组件
+          %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+          %input{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: 'datetimepicker1'}
+      %tr
+        %td
+        %td
+          %span 基准工时
+          %input
+          %span 小时
+        %td 
+          %span 基准成本(￥)
+          %input
+      %tr
+        %td
+        %td
+          %span 基本人工成本(￥)
+          %input
+        %td 
+          %span 基准费用成本(￥)
+          %input
+      %tr
+        %td{colspan: '3'}
+      %tr
+        %td
+        %td
+          %span 项目开始状态
+          %select
+            %option 未开始
+            %option 立项中
+            %option 进行中
+            %option 待验收
+            %option 已完成
+            %option 延期完成
+            %option 已暂停
+            %option 已取消
+          %span{style: "color: red;"} *
+        %td 
+          %span 项目进度
+          %input
+          %span %
+      %tr
+        %td
+        %td
+          %span 计划开始于
+          / TODO日历组件
+          %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+          %input{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker2"}
+        %td 
+          %span 计划完成于
+          / TODO 日历组件
+          %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+          %input{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker3"}
+      %tr
+        %td
+        %td
+          %span 实际开始于
+          / TODO日历组件
+          %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+          %input{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker4"}
+        %td 
+          %span 实际完成于
+          / TODO 日历组件
+          %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+          %input{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker5"}
+      %tr
+        %td
+        %td{colspan: "2"}
+          %span 控制工时
+          %input
+          %span 小时
+      %tr
+        %td{colspan: "3"}
+          %span{style: "font-weight: bold;font-size: 18px;"}
+            %i.glyphicon.glyphicon-yen
+            项目金额
+      %tr
+        %td
+        %td
+          %span 币种
+          %select
+            %option 系统默认
+        %td 
+          %span 汇率
+          %input{disabled: true}
+      %tr
+        %td
+        %td
+          %span 合同金额(￥)
+          %input
+        %td 
+          %span 税后金额(￥)
+          %input
+      %tr
+        %td{colspan: "3"}
+          %a.btn.btn-primary{href: "/test"} 创建
+          %a.btn.btn-default{href: "/test"} 取消
+  .bottom-district
+
+  .modal.fade.bs-example-modal-sm{tabindex: "-1", role: "dialog", aria: {labelledby: "modalLabel"}}
+    .modal-dialog.modal-sm{:role => "document"}
+      .modal-content
+        .modal-header{style:"background-color:#2B84DD;"}
+          %button.close{type: "button", data:{dismiss: "modal", global: "false" , aria: {label: "Close"}}}
+            %i.glyphicon.glyphicon-remove
+          %h4.modal-title{style:"color:white;font-family:Microsoft YaHei;font-size:18px;font-weight: bold;"} 选择项目分类
+        .modal-body
+          .title-e
+            %label 项目分类 ↓
+          .checkbox
+            %label
+              %input{type: "checkbox"}
+              Audit
+          .checkbox
+            %label
+              %input{type: "checkbox"}
+              ME
+          .checkbox
+            %label
+              %input{type: "checkbox"}
+              SC项目
+          .checkbox
+            %label
+              %input{type: "checkbox"}
+              TP 项目
+          .checkbox
+            %label
+              %input{type: "checkbox"}
+              创意类
+          .checkbox
+            %label
+              %input{type: "checkbox"}
+              策略类
+          .checkbox
+            %label
+              %input{type: "checkbox"}
+              高新复审
+          .checkbox
+            %label
+              %input{type: "checkbox"}
+              高新认定
+        .modal-footer
+          %button.btn.btn-primary{type: "button"}选择
+          %button.btn.btn-default.close-modal{type: "button", data:{dismiss: "modal"}}关闭
+
+  .modal.fade.bs-example-modal-lg{tabindex: "-1", role: "dialog", aria: {labelledby: "modalLabel"}}
+    .modal-dialog.modal-lg{:role => "document"}
+      .modal-content
+        .modal-header{style:"background-color:#2B84DD;"}
+          %button.close{type: "button", data:{dismiss: "modal", global: "false" , aria: {label: "Close"}}}
+            %i.glyphicon.glyphicon-remove
+          %h4.modal-title{style:"color:white;font-family:Microsoft YaHei;font-size:18px;font-weight: bold;"} 选择客户
+        .modal-body{style: "background-color: #EAEAEA;"}
+          .modal-search-box{style: "background-color: white;padding: 10px;"}
+            %form.form-inline
+              .form-group{style: "margin-right: 20px;"}
+                %span 编码
+                %input.form-control
+              .form-group{style: "margin-right: 20px;"}
+                %span 名称
+                %input.form-control
+              %button.btn.btn-primary{type: "submit"} 查询
+          .modal-table-list{style: "background-color: white;margin-top: 10px;padding: 10px;"}
+            %table.table.table-hover
+              %thead
+                %tr{style: "background-color: #EAEAEA"}
+                  %td 编码
+                  %td 名称
+                  %td 阶段
+                  %td 城市
+                  %td 分类
+              %tbody
+                -@customer_num_ary.each do |c|
+                  %tr
+                    %td
+                      =c
+                    %td 斯柯达
+                    %td 签约客户
+                    %td 北京
+                    %td 汽车
+        .modal-footer
+          %button.btn.btn-primary{type: "button"}选择
+          %button.btn.btn-default.close-modal{type: "button", data:{dismiss: "modal"}}关闭

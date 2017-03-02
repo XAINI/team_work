@@ -1,0 +1,49 @@
+.department-staff-time-total
+  .top-area
+  .department-staf-time-total-nav
+    %label{style: "margin-right: 20px;font-size: 18px;"} 
+      %i.glyphicon.glyphicon-list-alt
+      报表服务 - 项目报表 - DT02.部门员工工时汇总表
+    %a.btn.btn-primary{href: "/test/report_form_list"} 返回
+  .department-staf-time-total-body
+    %table.table.table-bordered
+      %caption{style: "padding-bottom: 10px;text-align: center;font-size: 24px;"} 部门员工工时汇总表
+      %caption 
+        %span.report-caption 报表编号
+        %span DT02_DTEMPTIMESUM
+      %caption 
+        %span.report-caption 日期范围
+        %span 2017-02-01 - 2017-02-28
+      %thead
+        %tr{style: "background-color: #5ECAF2;"}
+          %th 部门编码
+          %th 部门名称
+          %th 员工登录名
+          %th 员工姓名
+          %th 员工编号
+          %th 总计
+      %tbody
+        %tr
+          %td{rowspan: "4"} dp-002
+          %td{rowspan: "4"} 设计部
+          %td dm01
+          %td 部门经理(设计)
+          %td 1dm01
+          %td 32.00
+        %tr
+          %td pm01
+          %td 项目经理(设计)
+          %td 1pm01
+          %td 161.00
+        %tr
+          %td staff01
+          %td 普通员工(设计)
+          %td 1staff01
+          %td 238.00
+        %tr{style: "background-color: #F3F3F3;"}
+          %th{colspan: "3", style: "text-align: right;"} 按部门汇总
+          %th 431.00
+        %tr{style: "background-color: #FEAD4E;"}
+          %th{colspan: "5", style: "text-align: right;"} 总计
+          %th 431.00
+  .bottom-area

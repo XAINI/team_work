@@ -1,0 +1,285 @@
+.event-list{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .top-district{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-district{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .search-box{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    .navigator-btn{
+      margin-bottom: 10px;
+    }
+  }
+  .event-list-box{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+.new-event{
+  font-family: Microsoft YaHei;
+  width: auto;
+  height: auto;
+  background-color: #EAEAEA;
+  .top-district{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .page-title{
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+  }
+  .event-table{
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    tr{
+      td{
+        border-top: none;
+        border-bottom: none;
+        textarea{
+          width: 80%;
+        }
+        select{
+          width: 40%;
+        }
+      }
+    }
+  }
+  .bottom-district{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+}
+
+.form-for-report{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .top-option{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  .event-form-report{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    .report-caption{
+      margin-right: 20px;
+    }
+  }
+  .top-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-area{
+    height: 5px;
+    background-color: #EAEAEA; 
+  }
+}
+
+.report-form-list{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .report-lst-title{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  .report-lst-body{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  .top-district{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-district{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .report-lst-body{
+    table{
+      tbody{
+        tr{
+          td{
+            border-top:none;
+            border-bottom:none;
+            a{
+              i{
+                color: black;
+              }
+            }
+            a:link{
+              text-decoration: none;
+              color: #00ade6;
+            }
+            a:visited{
+              color: #600090;
+            }
+            a:hover{
+              color: #FEAD4E;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.event-total-report-form{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .top-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-area{
+    height: 5px;
+    background-color: #EAEAEA; 
+  }
+  .total-nav{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  .total-body{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+
+}
+
+.event-staff-form-report{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .top-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-area{
+    height: 5px;
+    background-color: #EAEAEA; 
+  }
+  .evt-staff-nav{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  .evt-staff-body{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+.event-staff-time-total{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .top-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-area{
+    height: 5px;
+    background-color: #EAEAEA; 
+  }
+  .evt-staff-time-nav{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  .evt-staff-time-body{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    table{
+      tr{
+        td{
+          text-align: center;
+        }
+        th{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.department-evt-time-total{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .top-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-area{
+    height: 5px;
+    background-color: #EAEAEA; 
+  }
+  .dptm-evt-time-total-nav{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  .dptm-evt-time-total-body{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    table{
+      tr{
+        td{
+          text-align: center;
+        }
+        th{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+  
+.department-staff-time-total{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .top-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .department-staf-time-total-nav{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+  }
+  .department-staf-time-total-body{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    table{
+      tr{
+        td{
+          text-align: center;
+        }
+        th{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+  

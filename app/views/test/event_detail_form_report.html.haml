@@ -1,0 +1,53 @@
+.form-for-report
+  .top-area
+  .top-option
+    %label{style: "margin-right: 20px;font-size: 18px;"} 
+      %i.glyphicon.glyphicon-list-alt
+      报表服务 - 项目报表 - PJ01. 项目工时明细列表
+    %a.btn.btn-primary{href: "/test/report_form_list"} 返回
+  .event-form-report
+    %table.table.table-bordered
+      %caption{style: "padding-bottom: 10px;text-align: center;font-size: 24px;"} 项目工时明细列表
+      %caption 
+        %span.report-caption 报表编号
+        %span PJ01_TSPRJDET
+      %caption 
+        %span.report-caption 日期范围
+        %span 2017-02-01 - 2017-02-28
+      %thead
+        %tr{style: "background-color: #5ECAF2;"}
+          %th 项目编号
+          %th 项目名称
+          %th 项目经理
+          %th 项目状态
+          %th 项目优先级
+          %th 员工登录名
+          %th 员工姓名
+          %th 员工编号
+          %th 正常工时
+          %th 加班工时
+          %th 总计
+      %tbody
+        %tr
+          %td{rowspan: "2"} 00123
+          %td 测试项目 - mindpin
+          %td Alan
+          %td 进行中
+          %td 紧急
+          %td staff01
+          %td 普通员工(设计)
+          %td 001
+          %td 6.00
+          %td 15.00
+          %td 21
+        %tr{style: "background-color: #F3F3F3;"}
+          %th{colspan: "7", style: "text-align: right;"} 按项目汇总
+          %th 6.00
+          %th 15.00
+          %th 21.00
+        %tr{style: "background-color: #FEAD4E;"}
+          %th{colspan: "8", style: "text-align: right;"} 总计
+          %th 6.00
+          %th 15.00
+          %th 21.00
+  .bottom-area
