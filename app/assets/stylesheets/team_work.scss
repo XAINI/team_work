@@ -1,47 +1,57 @@
-.event-list{
+@mixin gray_area_and_body_bgcolor_font_family{
   font-family: Microsoft YaHei;
   background-color: #EAEAEA;
-  .top-district{
+  .top-area{
     height: 5px;
     background-color: #EAEAEA;
   }
-  .bottom-district{
+  .bottom-area{
     height: 5px;
     background-color: #EAEAEA;
   }
+}
+
+@mixin box_bgcolor_and_distance{
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+@mixin form_report_table_style{
+  table{
+    tr{
+      td{
+        text-align: center;
+      }
+      th{
+        text-align: center;
+      }
+    }
+  }
+}
+
+.event-list{
+  @include gray_area_and_body_bgcolor_font_family;
   .search-box{
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
+    @include box_bgcolor_and_distance;
     .navigator-btn{
       margin-bottom: 10px;
     }
   }
   .event-list-box{
-    background-color: white;
-    margin: 20px;
-    padding: 20px;
+    @include box_bgcolor_and_distance;
   }
 }
 
 .new-event{
-  font-family: Microsoft YaHei;
+  @include gray_area_and_body_bgcolor_font_family;
   width: auto;
   height: auto;
-  background-color: #EAEAEA;
-  .top-district{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
   .page-title{
-    background-color: white;
-    margin: 20px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
   .event-table{
-    background-color: white;
-    margin: 20px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
     tr{
       td{
         border-top: none;
@@ -55,60 +65,28 @@
       }
     }
   }
-  .bottom-district{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
 }
 
 .form-for-report{
-  font-family: Microsoft YaHei;
-  background-color: #EAEAEA;
+  @include gray_area_and_body_bgcolor_font_family;
   .top-option{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
   .event-form-report{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
     .report-caption{
       margin-right: 20px;
     }
   }
-  .top-area{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
-  .bottom-area{
-    height: 5px;
-    background-color: #EAEAEA; 
-  }
 }
 
 .report-form-list{
-  font-family: Microsoft YaHei;
-  background-color: #EAEAEA;
+  @include gray_area_and_body_bgcolor_font_family;
   .report-lst-title{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
   .report-lst-body{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
-  }
-  .top-district{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
-  .bottom-district{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
-  .report-lst-body{
+    @include box_bgcolor_and_distance;
     table{
       tbody{
         tr{
@@ -138,148 +116,56 @@
 }
 
 .event-total-report-form{
-  font-family: Microsoft YaHei;
-  background-color: #EAEAEA;
-  .top-area{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
-  .bottom-area{
-    height: 5px;
-    background-color: #EAEAEA; 
-  }
+  @include gray_area_and_body_bgcolor_font_family;
   .total-nav{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
   .total-body{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
 
 }
 
 .event-staff-form-report{
-  font-family: Microsoft YaHei;
-  background-color: #EAEAEA;
-  .top-area{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
-  .bottom-area{
-    height: 5px;
-    background-color: #EAEAEA; 
-  }
+  @include gray_area_and_body_bgcolor_font_family;
   .evt-staff-nav{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
   .evt-staff-body{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
 }
 
 .event-staff-time-total{
-  font-family: Microsoft YaHei;
-  background-color: #EAEAEA;
-  .top-area{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
-  .bottom-area{
-    height: 5px;
-    background-color: #EAEAEA; 
-  }
+  @include gray_area_and_body_bgcolor_font_family;
   .evt-staff-time-nav{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
   .evt-staff-time-body{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
-    table{
-      tr{
-        td{
-          text-align: center;
-        }
-        th{
-          text-align: center;
-        }
-      }
-    }
+    @include box_bgcolor_and_distance;
+    @include form_report_table_style;
   }
 }
 
 .department-evt-time-total{
-  font-family: Microsoft YaHei;
-  background-color: #EAEAEA;
-  .top-area{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
-  .bottom-area{
-    height: 5px;
-    background-color: #EAEAEA; 
-  }
+  @include gray_area_and_body_bgcolor_font_family;
   .dptm-evt-time-total-nav{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
   .dptm-evt-time-total-body{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
-    table{
-      tr{
-        td{
-          text-align: center;
-        }
-        th{
-          text-align: center;
-        }
-      }
-    }
+    @include box_bgcolor_and_distance;
+    @include form_report_table_style;
   }
 }
   
 .department-staff-time-total{
-  font-family: Microsoft YaHei;
-  background-color: #EAEAEA;
-  .top-area{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
-  .bottom-area{
-    height: 5px;
-    background-color: #EAEAEA;
-  }
+  @include gray_area_and_body_bgcolor_font_family;
   .department-staf-time-total-nav{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
+    @include box_bgcolor_and_distance;
   }
   .department-staf-time-total-body{
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
-    table{
-      tr{
-        td{
-          text-align: center;
-        }
-        th{
-          text-align: center;
-        }
-      }
-    }
+    @include box_bgcolor_and_distance;
+    @include form_report_table_style;
   }
 }
   

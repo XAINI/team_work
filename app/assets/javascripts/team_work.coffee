@@ -12,9 +12,7 @@ class NewEvent
 
   bind_event: ->
     jQuery("#datetimepicker").datetimepicker ->
-      format: "yyyy/m/dd",
-      minView: 2,
-      todayBtn: true
+     format: 'yyyy-mm-dd hh:ii'
 
     jQuery("#datetimepicker1").datetimepicker ->
       format: 'yyyy-mm-dd hh:ii'

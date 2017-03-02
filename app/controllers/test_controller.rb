@@ -12,27 +12,32 @@ class TestController < ApplicationController
   end
 
   def event_detail_form_report
-    
+    real_time()
   end
 
   def event_total_form_report
-    
+    real_time()
   end
 
   def event_staff_type_form_report
-    
+    real_time()
   end
 
   def event_staff_time_total_form_report
-    
+    real_time()
   end
 
   def department_evt_time_total_form_report
-    
+    real_time()
   end
 
   def department_staff_time_total_form_report
-    
+    real_time()
   end
+
+  private
+    def real_time
+      @today = Time.new.strftime("%Y年%m月%d日 %H:%M:%S")
+    end
     
 end
