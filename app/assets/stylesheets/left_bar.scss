@@ -1,15 +1,53 @@
+@mixin target_a_style{
+  a{
+    color: white;
+  }
+  a:link{
+    text-decoration: none;
+  }
+  a:hover{
+    color: #00C1DE;
+  }
+}
+
 .left-bar{
-    z-index: 1;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 200px;
-    background-color: #99CCFF;
-    font-size: 16px;
-    padding-bottom: 10px;
+  font-family: Microsoft YaHei;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 200px;
+  background-color: #333744;
+  font-size: 16px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 4px;
+  .tables{
+    @include target_a_style;
+  }
+  .manage_project{
+    @include target_a_style;
+  }
+  .work_time{
+    @include target_a_style;
+  }
+  .examine{
+    @include target_a_style;
+  }
+  .mine-task{
+    @include target_a_style;
+  }
+  .projects_tasks{
+    @include target_a_style;
+  }
+  .prijects{
+    @include target_a_style;
+  }
 }
 
 .title-1{
   font-size: 18px;
 }
+

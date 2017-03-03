@@ -1,11 +1,3 @@
-class EventList
-  constructor: (@$eml)->
-    @bind_event()
-
-  bind_event: ->
-    @$eml.on "click",".navigator-btn .redirect-new", ->
-      window.location.href = "/test/new"
-
 class NewEvent
   constructor: (@$eml)->
     @bind_event()
@@ -30,12 +22,6 @@ class NewEvent
       format: 'yyyy-mm-dd hh:ii'
 
 
-
-
-
-jQuery(document).on "ready turbolinks:load",->
-  if jQuery(".event-list").length > 0
-    new EventList jQuery(".event-list")
 
 jQuery(document).on "ready turbolinks:load", ->
   if jQuery(".new-event").length > 0

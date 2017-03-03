@@ -1,6 +1,7 @@
 @mixin gray_area_and_body_bgcolor_font_family{
   font-family: Microsoft YaHei;
   background-color: #EAEAEA;
+  margin-left: 200px;
   .top-area{
     height: 5px;
     background-color: #EAEAEA;
@@ -39,6 +40,15 @@
     }
   }
   .event-list-box{
+    a{
+      color: #00C1DE;
+    }
+    a:link{
+      text-decoration: none;
+    }
+    a:hover{
+      color: #FEAD4E;
+    }
     @include box_bgcolor_and_distance;
   }
 }
