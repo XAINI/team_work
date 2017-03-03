@@ -1,0 +1,53 @@
+.page-build-task{
+  .head{
+
+    .headbtns{
+      width:350px;
+      height:40px;
+    }
+    .headbar{
+      width:1100px;
+    }
+  }
+  .details-page{
+    height: 88%;
+  }
+  .bigline{
+    margin-left: 30px;
+    height:  60px;
+
+    .line-div-half-item1{
+        float: left;
+        display: inline-block;
+        width:120px;
+      }
+
+    .line-div-half-item2{
+        float: left;
+        display: inline-block;
+        width: 75%;
+    }
+
+  }
+  .line{
+    margin-left: 30px;
+    height:  40px;
+
+
+    .line-div-half{
+      display: inline-block;
+      width: 48%;
+      height: 100%;
+
+    }
+    .line-div-half-item1{
+        display: inline-block;
+        width: 120px;
+      }
+
+    .line-div-half-item2{
+        display: inline-block;
+        width: 60%;
+    }
+  }
+}
