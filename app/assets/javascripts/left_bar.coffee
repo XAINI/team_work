@@ -17,7 +17,10 @@ class LeftBar
        $(this).addClass('title-close')
 
 
-jQuery(document).on 'ready page:load', ->
+jQuery(document).on 'turbolinks:render', ->
   if $(document).find('body .left-bar').length > 0
     new LeftBar jQuery('.left-bar')
     
+jQuery(document).on 'ready page:load', ->
+  if $(document).find('body .left-bar').length > 0
+    new LeftBar jQuery('.left-bar')
