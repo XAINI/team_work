@@ -35,9 +35,21 @@ class TestController < ApplicationController
     real_time()
   end
 
+  def working_hours_submit
+    
+  end
+
+  def working_hours_approval
+    
+  end
+
+  def working_hours_approval_history
+    
+  end
+
   private
     def real_time
       @today = Time.new.strftime("%Y年%m月%d日 %H:%M:%S")
     end
-    
+
 end
