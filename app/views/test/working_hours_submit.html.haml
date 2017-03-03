@@ -1,0 +1,185 @@
+.working-hours-submit-page
+  .first-block
+    %i.glyphicon.glyphicon-tags
+    工时填报
+  .second-block
+    .submit-staff= "填报人：员工1 工作时间：20/02/2017-26/02/2017"
+  .third-block
+    .top-buttons
+      %button.btn.btn-primary= "新增"
+      %button.btn.btn-primary= "保存"
+      %button.btn.btn-primary= "提交"
+    %table.table.table-hover.table-bordered
+      %thead
+        %th.operations= "操 作"
+        %th.operations= "所属项目"
+        %th.operations= "所属任务"
+        %th.date= "星期一"
+        %th.date= "星期二"
+        %th.date= "星期三"
+        %th.date= "星期四"
+        %th.date= "星期五"
+        %th.date= "星期六"
+        %th.date= "星期日"
+        %th.total= "总 计(小时)"
+      %tbody
+        %tr.working-hours-input
+          %th.operations
+            %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-menu-left
+            %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-plus
+            %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-minus
+          %th
+            %select.select-project
+              %option= "请点击选择项目"
+              %option= "项目1"
+              %option= "项目2"
+              %option= "项目3"
+              %option= "项目4" 
+          %th
+            %select.select-task
+              %option= "请点击选择具体任务"
+              %option= "任务1"
+              %option= "任务2"
+              %option= "任务3"
+              %option= "任务4"
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th.total= "0"
+        %tr.working-hours-input
+          %th.operations
+            %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-menu-left
+            %a{title:"添加",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-plus
+            %a{title:"删除",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-minus
+          %th
+            %select.select-project
+              %option= "请点击选择项目"
+              %option= "项目1"
+              %option= "项目2"
+              %option= "项目3"
+              %option= "项目4" 
+          %th
+            %select.select-task
+              %option= "请点击选择具体任务"
+              %option= "任务1"
+              %option= "任务2"
+              %option= "任务3"
+              %option= "任务4"
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th.total= "0"
+        %tr.working-hours-input
+          %th.operations
+            %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-menu-left
+            %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-plus
+            %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
+              %i.glyphicon.glyphicon-minus
+          %th
+            %select.select-project
+              %option= "请点击选择项目"
+              %option= "项目1"
+              %option= "项目2"
+              %option= "项目3"
+              %option= "项目4" 
+          %th
+            %select.select-task
+              %option= "请点击选择具体任务"
+              %option= "任务1"
+              %option= "任务2"
+              %option= "任务3"
+              %option= "任务4"
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th
+            %input{size:"4", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+          %th.total= "0"
+      %tfoot
+        %tr
+          %th.three-col{colspan:"3"}="总 计:"
+          %th
+            %input.total{type:"checkbox"}= "0"
+          %th
+            %input.total{type:"checkbox"}= "0"
+          %th
+            %input.total{type:"checkbox"}= "0"
+          %th
+            %input.total{type:"checkbox"}= "0"
+          %th
+            %input.total{type:"checkbox"}= "0"
+          %th
+            %input.total{type:"checkbox"}= "0"
+          %th
+            %input.total{type:"checkbox"}= "0"
+          %th.total= "0"
+
+    .bottom-buttons
+      %button.btn.btn-primary= "新增"
+      %button.btn.btn-primary= "保存"
+      %button.btn.btn-primary= "提交"
+
+.modal.fade.bs-example-modal-lg{tabindex: "-1", role: "dialog", aria: {labelledby: "modalLabel"}}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      .modal-header{style:"background-color:#2B84DD;"}
+        %button.close{type: "button", data:{dismiss: "modal", global: "false" , aria: {label: "Close"}}}
+          %i.glyphicon.glyphicon-remove
+        %h4.modal-title{style:"color:white;font-family:Microsoft YaHei;font-size:18px;font-weight: bold;"} 填报工时信息
+      .modal-body
+        .form-group
+          %label.control-label= "时间类型"
+          %select.select-project
+            %option= "正常工时"
+            %option= "加班工时"
+        .form-group
+          %label.control-label= "工作内容"
+          %input.form-control{type:"text"}
+        .form-group
+          %label.control-label= "存在问题"
+          %input.form-control{type:"text"}
+        .form-group
+          %label.control-label= "拟解决措施"
+          %input.form-control{type:"text"}
+      .modal-footer
+        %button.btn.btn-primary{type: "button", data:{dismiss: "modal"}}确定
+        %button.btn.btn-default.close-modal{type: "button", data:{dismiss: "modal"}}清除

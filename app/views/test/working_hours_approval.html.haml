@@ -1,0 +1,155 @@
+.working-hours-for-staff
+  %i.glyphicon.glyphicon-tags
+  工时审核
+  .container
+    .row
+      .span8
+        %ul.nav.nav-tabs
+          %li
+            %a{href:"#"}="按日期分组"
+          %li
+            %a{href:"#"}="按项目分组"
+          %li.active
+            %a{href:"#"}="按员工分组"
+          %li
+            %a{href:"/test/working_hours_approval_history"}="工时审核历史记录"
+  .query
+    审批人
+    %select.approval
+      %option= "项目经理（设计）"
+      %option= "所有审批人"
+    时间类型
+    %select.time
+      %option= "不指定"
+      %option= "休假工时"
+      %option= "加班工时"
+      %option= "正常工时"
+    员工
+    %select.staff
+      %option= ""
+      %option= "员工1"
+      %option= "员工2"
+      %option= "员工3"
+    %button.btn.btn-primary= "查询"
+  %hr
+  %table.table-list.no-hover.working_time
+    %tbody
+      %tr.gray-bg{hetght:"35"}
+        %td{width:"100%",height:"25",colspan:"4"}
+          %table.fullsize
+            %tbody
+              %tr
+                %td
+                  %a.staff="员工1"
+                %td
+                  %i.glyphicon.glyphicon-user="设计部"
+                %td
+                  %i.glyphicon.glyphicon-warning-sign="普通行政人员"      
+                %td
+                  %a.check-working-hours="查看本周工时"
+                %td
+                  总计:
+                  %span="10"
+                  小时
+              %tr{style:"dispaly: table-row"}
+                %table
+                  %tr
+                    %td.red-bg.right{rowspan:"2",style:"display: table-cell"}="1."
+                    %td.red-bg.right{rowspan:"2",style:"display: table-cell"}
+                      %input{type:"checkbox"}
+                    %td.red-bg.top{rowspan:"2",style:"display: table-cell"}
+                      .approval-single-row
+                        %span.gray="项目:"
+                        %span.gray="项目1"
+                      .approval-single-row
+                        %span.gray="日期:"
+                        %span.bold="2017-02-27 （星期一）"
+                    %td.red-bg.top{rowspan:"2",style:"display: table-cell"}
+                      .approval-single-row
+                        %span.gray="任务:"
+                        %span.gray="任务1"
+                      .approval-single-row
+                        %span.gray="工时:"
+                        %span.bold="2小时（加班工时）"
+                  %tr{style:"dispaly: table-row"}
+                    %td.red-bg.right{rowspan:"2",style:"display: table-cell"}="2."
+                    %td.red-bg.right{rowspan:"2",style:"display: table-cell"}
+                      %input{type:"checkbox"}
+                    %td.red-bg.top{rowspan:"2",style:"display: table-cell"}
+                      .approval-single-row
+                        %span.gray="项目:"
+                        %span.gray="项目2"
+                      .approval-single-row
+                        %span.gray="日期:"
+                        %span.bold="2017-02-27 （星期一）"
+                    %td.red-bg.top{rowspan:"2",style:"display: table-cell"}
+                      .approval-single-row
+                        %span.gray="任务:"
+                        %span.gray="任务2"
+                      .approval-single-row
+                        %span.gray="工时:"
+                        %span.bold="8小时（正常工时）"
+      %tr.gray-bg{hetght:"35"}
+        %td{width:"100%",height:"25",colspan:"4"}
+          %table.fullsize
+            %tbody
+              %tr
+                %td
+                  %a.staff="员工2"
+                %td
+                  %i.glyphicon.glyphicon-user
+                  ="设计部"
+                %td
+                  %i.glyphicon.glyphicon-warning-sign
+                  ="普通行政人员"      
+                %td
+                  %a.check-working-hours="查看本周工时"
+                %td
+                  总计:
+                  %span="8"
+                  小时
+              %tr{style:"dispaly: table-row"}
+                %table
+                  %tr
+                    %td.red-bg.right{rowspan:"2",style:"display: table-cell"}="1."
+                    %td.red-bg.right{rowspan:"2",style:"display: table-cell"}
+                      %input{type:"checkbox"}
+                    %td.red-bg.top{rowspan:"2",style:"display: table-cell"}
+                      .approval-single-row
+                        %span.gray="项目:"
+                        %span.gray="项目4"
+                      .approval-single-row
+                        %span.gray="日期:"
+                        %span.bold="2017-02-27 （星期一）"
+                    %td.red-bg.top{rowspan:"2",style:"display: table-cell"}
+                      .approval-single-row
+                        %span.gray="任务:"
+                        %span.gray="任务4"
+                      .approval-single-row
+                        %span.gray="工时:"
+                        %span.bold="8小时（正常工时）"
+                  %tr
+                    %td.red-bg.right{rowspan:"2",style:"display: table-cell"}="2."
+                    %td.red-bg.right{rowspan:"2",style:"display: table-cell"}
+                      %input{type:"checkbox"}
+                    %td.red-bg.top{rowspan:"2",style:"display: table-cell"}
+                      .approval-single-row
+                        %span.gray="项目:"
+                        %span.gray="项目3"
+                      .approval-single-row
+                        %span.gray="日期:"
+                        %span.bold="2017-02-27 （星期一）"
+                    %td.red-bg.top{rowspan:"2",style:"display: table-cell"}
+                      .approval-single-row
+                        %span.gray="任务:"
+                        %span.gray="任务3"
+                      .approval-single-row
+                        %span.gray="工时:"
+                        %span.bold="8小时（正常工时）"
+  .bottom-buttons
+    %button.btn.btn-primary
+      %i.glyphicon.glyphicon-ok
+      = "同意"
+    %button.btn.btn-primary
+      %i.glyphicon.glyphicon-remove
+      = "拒绝"

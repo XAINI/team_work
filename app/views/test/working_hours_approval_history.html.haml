@@ -1,0 +1,117 @@
+.working-hours-for-staff
+  %i.glyphicon.glyphicon-tags
+  工时审核历史记录
+  .container
+    .row
+      .span8
+        %ul.nav.nav-tabs
+          %li
+            %a{href:"#"}="按日期分组"
+          %li
+            %a{href:"#"}="按项目分组"
+          %li
+            %a{href:"/test/working_hours_approval"}="按员工分组"
+          %li.active
+            %a{href:"#"}="工时审核历史记录"
+  .select
+    .first
+      时间类型
+      %select
+        %option= "不指定"
+        %option= "休假工时"
+        %option= "加班工时"
+        %option= "正常工时"
+      申请人
+      %select
+        %option= ""
+        %option= "员工1"
+        %option= "员工2"
+        %option= "员工3"
+      所属项目
+      %input
+    .second
+      工时开始时间
+      %input{size:"16",type:"text",value:"12-02-2012"}
+      结束时间
+      %input.calendar2
+      时期范围
+      %select
+        %option="不指定"
+        %option="截至当前"
+        %option="今年"
+        %option="本季度"
+        %option="本月"
+        %option="本周"
+    .third
+      审批开始时间
+      %input.calendar3
+      结束时间
+      %input.calendar4
+      时期范围
+      %select
+        %option="不指定"
+        %option="截至当前"
+        %option="今年"
+        %option="本季度"
+        %option="本月"
+        %option="本周"
+      %button.btn.btn-primary="查询"
+
+  %table.table.table-hover
+    %thead
+      %th="操作"
+      %th="日期"
+      %th="填报人"
+      %th="提交时间"
+      %th="审批状态"
+      %th="审批时间"
+      %th="工时（小时）"
+      %th="时间类型"
+      %th="备注"
+      %th="所属项目"
+      %th="所属任务"
+    %tbody
+      %tr
+        %td=""
+        %td="2017-3-1"
+        %td="普通员工（设计）"
+        %td="2017-3-1 15:15"
+        %td="已批准"
+        %td="2017-3-1 16:16"
+        %td="8"
+        %td="正常工时"
+        %td=""
+        %td="项目1"
+        %td="任务1"
+      %tr
+        %td=""
+        %td="2017-3-1"
+        %td="普通员工（设计）"
+        %td="2017-3-1 15:15"
+        %td="已批准"
+        %td="2017-3-1 16:16"
+        %td="8"
+        %td="正常工时"
+        %td=""
+        %td="项目1"
+        %td="任务1"
+      %tr
+        %td=""
+        %td="2017-3-1"
+        %td="普通员工（设计）"
+        %td="2017-3-1 15:15"
+        %td="已批准"
+        %td="2017-3-1 16:16"
+        %td="8"
+        %td="正常工时"
+        %td=""
+        %td="项目1"
+        %td="任务1"
+    %tfoot
+      %tr
+        %td.zjb{colspan:"6"}="总计:"
+        %td="24"
+        %td=""
+        %td=""
+        %td=""
+        %td=""
