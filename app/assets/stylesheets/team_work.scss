@@ -1,0 +1,171 @@
+@mixin gray_area_and_body_bgcolor_font_family{
+  font-family: Microsoft YaHei;
+  background-color: #EAEAEA;
+  .top-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+}
+
+@mixin box_bgcolor_and_distance{
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+@mixin form_report_table_style{
+  table{
+    tr{
+      td{
+        text-align: center;
+      }
+      th{
+        text-align: center;
+      }
+    }
+  }
+}
+
+.event-list{
+  @include gray_area_and_body_bgcolor_font_family;
+  .search-box{
+    @include box_bgcolor_and_distance;
+    .navigator-btn{
+      margin-bottom: 10px;
+    }
+  }
+  .event-list-box{
+    @include box_bgcolor_and_distance;
+  }
+}
+
+.new-event{
+  @include gray_area_and_body_bgcolor_font_family;
+  width: auto;
+  height: auto;
+  .page-title{
+    @include box_bgcolor_and_distance;
+  }
+  .event-table{
+    @include box_bgcolor_and_distance;
+    tr{
+      td{
+        border-top: none;
+        border-bottom: none;
+        textarea{
+          width: 80%;
+        }
+        select{
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+.form-for-report{
+  @include gray_area_and_body_bgcolor_font_family;
+  .top-option{
+    @include box_bgcolor_and_distance;
+  }
+  .event-form-report{
+    @include box_bgcolor_and_distance;
+    .report-caption{
+      margin-right: 20px;
+    }
+  }
+}
+
+.report-form-list{
+  @include gray_area_and_body_bgcolor_font_family;
+  .report-lst-title{
+    @include box_bgcolor_and_distance;
+  }
+  .report-lst-body{
+    @include box_bgcolor_and_distance;
+    table{
+      tbody{
+        tr{
+          td{
+            border-top:none;
+            border-bottom:none;
+            a{
+              i{
+                color: black;
+              }
+            }
+            a:link{
+              text-decoration: none;
+              color: #00ade6;
+            }
+            a:visited{
+              color: #600090;
+            }
+            a:hover{
+              color: #FEAD4E;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.event-total-report-form{
+  @include gray_area_and_body_bgcolor_font_family;
+  .total-nav{
+    @include box_bgcolor_and_distance;
+  }
+  .total-body{
+    @include box_bgcolor_and_distance;
+  }
+
+}
+
+.event-staff-form-report{
+  @include gray_area_and_body_bgcolor_font_family;
+  .evt-staff-nav{
+    @include box_bgcolor_and_distance;
+  }
+  .evt-staff-body{
+    @include box_bgcolor_and_distance;
+  }
+}
+
+.event-staff-time-total{
+  @include gray_area_and_body_bgcolor_font_family;
+  .evt-staff-time-nav{
+    @include box_bgcolor_and_distance;
+  }
+  .evt-staff-time-body{
+    @include box_bgcolor_and_distance;
+    @include form_report_table_style;
+  }
+}
+
+.department-evt-time-total{
+  @include gray_area_and_body_bgcolor_font_family;
+  .dptm-evt-time-total-nav{
+    @include box_bgcolor_and_distance;
+  }
+  .dptm-evt-time-total-body{
+    @include box_bgcolor_and_distance;
+    @include form_report_table_style;
+  }
+}
+  
+.department-staff-time-total{
+  @include gray_area_and_body_bgcolor_font_family;
+  .department-staf-time-total-nav{
+    @include box_bgcolor_and_distance;
+  }
+  .department-staf-time-total-body{
+    @include box_bgcolor_and_distance;
+    @include form_report_table_style;
+  }
+}
+  

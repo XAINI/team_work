@@ -1,0 +1,164 @@
+.department-evt-time-total
+  .top-area
+  .dptm-evt-time-total-nav
+    %label{style: "margin-right: 20px;font-size: 18px;"} 
+      %i.glyphicon.glyphicon-list-alt
+      报表服务 - 项目报表 - DT01.部门项目工时汇总矩阵表
+    %a.btn.btn-primary{href: "/test/report_form_list"} 返回
+  .dptm-evt-time-total-body
+    %table.table.table-bordered
+      %caption{style: "padding-bottom: 10px;text-align: center;font-size: 24px;"} 部门项目工时汇总矩阵表
+      %caption 
+        %span.report-caption 报表编号
+        %span DT01_DTPRJTIME
+      %caption 
+        %span.report-caption 日期范围
+        %span 2017-02-01 - 2017-02-28
+      %thead
+        %tr{style: "background-color: #5ECAF2;"}
+          %th{rowspan: "2", style: "border-right:none;width:5%;"} 部门编码
+          %th{rowspan: "2", style: "border-right:none;border-left:none;width:5%;"} 部门名称
+          %th{rowspan: "2", style: "border-right:none;border-left:none;width:5%;"} 员工登录名
+          %th{rowspan: "2", style: "border-right:none;border-left:none;width:5%;"} 员工姓名
+          %th{rowspan: "2", style: "border-right:none;border-left:none;width:5%;"} 员工编号
+          %th 0001
+          %th 0002
+          %th 00123
+          %th 02
+          %th 0demo2015
+          %th 1001
+          %th 20151002
+          %th 5678
+          %th 6789
+          %th 8901
+          %th 999
+          %th 99999999
+          %th A001
+          %th BT01
+          %th GX_NN_01_1505_0003
+          %th P20170001
+          %th{rowspan: "2"} 总计
+        %tr{style: "background-color: #5ECAF2;"}
+          %th 公司内部事务 Admin
+          %th 公司休假 Leave
+          %th 测试项目-mindpin
+          %th 事务性项目
+          %th 建筑设计测试项目
+          %th 测试项目01
+          %th BEIQI FUTIAN
+          %th bb5678
+          %th aa6789
+          %th 8901
+          %th 999
+          %th 苹果西瓜梨子
+          %th 苹果
+          %th LD电子政务项目
+          %th GX_NN_01_1505_0003
+          %th 空调设计
+      %tbody
+        %tr
+          %td{rowspan: "4"} dp-002
+          %td{rowspan: "4"} 设计部
+          %td dm01
+          %td 部门经理(设计)
+          %td 1dm01
+          %td 19
+          %td 
+          %td 
+          %td 5
+          %td 8
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 32
+        %tr
+          %td pm01
+          %td 项目经理(设计)
+          %td 1pm01
+          %td 92
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 
+          %td 47
+          %td 
+          %td 
+          %td 12.17
+          %td 
+          %td 
+          %td 
+          %td 9.83
+          %td 
+          %td 
+          %td 161
+        %tr
+          %td staff01
+          %td 普通员工(设计)
+          %td 1staff01
+          %td 2
+          %td 12
+          %td 21
+          %td 
+          %td 
+          %td 120
+          %td 
+          %td 2
+          %td 2
+          %td 2
+          %td 10
+          %td 4
+          %td 2
+          %td 9
+          %td 2
+          %td 50
+          %td 238
+        %tr{style: "background-color: #F3F3F3;"}
+          %th{colspan: "3", style: "text-align: right;"} 按部门汇总
+          %th 113
+          %th 12
+          %th 21
+          %th 5
+          %th 8
+          %th 120
+          %th 47
+          %th 2
+          %th 2
+          %th 14.17
+          %th 10
+          %th 4
+          %th 2
+          %th 18.83
+          %th 2
+          %th 50
+          %th 431
+        %tr{style: "background-color: #FEAD4E;"}
+          %th{colspan: "5", style: "text-align: right;"} 总计
+          %th 113
+          %th 12
+          %th 21
+          %th 5
+          %th 8
+          %th 120
+          %th 47
+          %th 2
+          %th 2
+          %th 14.17
+          %th 10
+          %th 4
+          %th 2
+          %th 18.83
+          %th 2
+          %th 50
+          %th 431
+    %span
+      =@today
+  .bottom-area

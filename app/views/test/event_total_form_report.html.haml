@@ -1,0 +1,63 @@
+.event-total-report-form
+  .top-area
+  .total-nav
+    %label{style: "margin-right: 20px;font-size: 18px;"} 
+      %i.glyphicon.glyphicon-list-alt
+      报表服务 - 项目报表 - PJ02. 项目工时汇总列表
+    %a.btn.btn-primary{href: "/test/report_form_list"} 返回
+  .total-body
+    %table.table.table-bordered
+      %caption{style: "padding-bottom: 10px;text-align: center;font-size: 24px;"} 项目工时汇总列表
+      %caption 
+        %span.report-caption 报表编号
+        %span PJ02_TSPRJSUM
+      %caption 
+        %span.report-caption 日期范围
+        %span 2017-02-01 - 2017-02-28
+      %thead
+        %tr{style: "background-color: #5ECAF2;"}
+          %th 项目编号
+          %th 项目名称
+          %th 项目经理
+          %th 项目状态
+          %th 项目优先级
+          %th 实际进度
+          %th 正常工时
+          %th 加班工时
+          %th 休假工时
+          %th 实际工时
+          %th 基准工时
+          %th 预估工时
+          %th 实际/基准
+          %th 实际/计划
+      %tbody
+        %tr
+          %td 00123
+          %td 测试项目-mindpin
+          %td Alan
+          %td 进行中
+          %td 紧急
+          %td 0.00%
+          %td 6.00
+          %td 
+            %span{style: "color: red;"} 5.00
+          %td 0.00
+          %td 11.00
+          %td 
+          %td 26
+          %td{style: "background-color: #A1E45A;"} 0.00%
+          %td{style: "background-color: #A1E45A;"} 21.15%
+        %tr{style: "background-color: #FEAD4E;"}
+          %th{colspan: "6", style: "text-align: right;"} 总计
+          %th 6.00
+          %th 
+            %span{style: "color: red;"} 5.00
+          %th 0.00
+          %th 11.00
+          %th 0.00
+          %th 52.00
+          %th 0.00%
+          %th 21.15%
+    %span
+      =@today
+  .bottom-area

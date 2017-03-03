@@ -1,0 +1,45 @@
+.event-staff-time-total
+  .top-area
+  .evt-staff-time-nav
+    %label{style: "margin-right: 20px;font-size: 18px;"} 
+      %i.glyphicon.glyphicon-list-alt
+      报表服务 - 项目报表 - PJ04. 项目工时员工分配汇总表
+    %a.btn.btn-primary{href: "/test/report_form_list"} 返回
+  .evt-staff-time-body
+    %table.table.table-bordered
+      %caption{style: "padding-bottom: 10px;text-align: center;font-size: 24px;"} 项目员工类型工时矩阵表
+      %caption 
+        %span.report-caption 报表编号
+        %span PJ04_TSPRJTABSUM
+      %caption 
+        %span.report-caption 日期范围
+        %span 2017-02-01 - 2017-02-28
+      %thead
+        %tr{style: "background-color: #5ECAF2;"}
+          %th 项目编号
+          %th 项目名称
+          %th 员工登录名
+          %th 员工姓名
+          %th 员工编号
+          %th 实际工时
+          %th 百分比(%)
+      %tbody
+        %tr
+          %td{rowspan: "2"} 00123
+          %td{rowspan: "2"} 测试项目-mindpin
+          %td staff01
+          %td 普通员工(设计)
+          %td 1staff01
+          %td 21
+          %td 100%
+        %tr{style: "background-color: #F3F3F3;"}
+          %th{colspan: "3", style: "text-align: right;"} 按项目汇总
+          %th 21
+          %th
+        %tr{style: "background-color: #FEAD4E;"}
+          %th{colspan: "5", style: "text-align: right;"} 总计
+          %th 21
+          %th
+    %span
+      =@today
+  .bottom-area

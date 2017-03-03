@@ -1,0 +1,52 @@
+.report-form-list
+  .top-area
+  .report-lst-title
+    %label{style: "margin-right:20px;font-size:20px;"}
+      %i.glyphicon.glyphicon-list
+      报表服务
+    %a.btn.btn-primary{href: "/test"} 返回
+  .report-lst-body
+    %table.table.table-bordered
+      %thead
+        %tr{style: "background-color: #EEEEEE"}
+          %th{style: "border-bottom:none;"} 报表名称
+          %th{style: "border-bottom:none;"} 报表描述
+      %tbody
+        %tr
+          %td 
+            %a{href: "/test/event_detail_form_report"} 
+              %i.glyphicon.glyphicon-list-alt
+              PJ01.项目工时明细表
+          %td 反应各项目下参与成员产生的实际工时数明细。
+        %tr
+          %td 
+            %a{href: "/test/event_total_form_report"} 
+              %i.glyphicon.glyphicon-list-alt
+              PJ02.项目工时汇总表
+          %td 项目总工时在正常工时、加班工时上的分布数量及比列。
+        %tr
+          %td
+            %a{href: "/test/event_staff_type_form_report"} 
+              %i.glyphicon.glyphicon-list-alt
+              PJ03.项目员工类型工时矩阵表
+          %td 统计和汇总参与项目的各种员工类型所投入的实际工时。
+        %tr
+          %td
+            %a{href: "/test/event_staff_time_total_form_report"} 
+              %i.glyphicon.glyphicon-list-alt
+              PJ04.项目工时员工分配汇总表
+          %td 统计各项目下参与成员所投入工时数据，并显示每个成员工时占所在项目总工时的百分比。
+        %tr
+          %td
+            %a{href: "/test/department_evt_time_total_form_report"} 
+              %i.glyphicon.glyphicon-list-alt
+              DT01.部门项目工时汇总矩阵表
+          %td 体现公司组织内各部门在各项目上所投入工时数的统计与汇总。
+        %tr
+          %td 
+            %a{href: "/test/department_staff_time_total_form_report"} 
+              %i.glyphicon.glyphicon-list-alt
+              DT02.部门员工工时汇总表
+          %td 反应公司组织内各部门员工在指定时间单位内的工时汇总值。
+  .bottom-area
+
