@@ -1,17 +1,36 @@
-.working-hours-submit-page{
-  background-color: #FFF;
+@mixin box_bgcolor_and_distance{
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+@mixin total_style{
+  background-color: #EAEAEA;
   font-family: Microsoft YaHei;
+  margin-left: 200px;
+  .top-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+  .bottom-area{
+    height: 5px;
+    background-color: #EAEAEA;
+  }
+}
+
+.working-hours-submit-page{
+  @include total_style;
   .first-block{
-    margin: 20px;
-    background-color: gray;
+    @include box_bgcolor_and_distance;
   }
   .second-block{
-    margin: 20px;
-    background-color: gray;
+    @include box_bgcolor_and_distance;
   }
   .third-block{
-    margin: 20px;
-    background-color: gray;
+    @include box_bgcolor_and_distance;
+    .top-buttons{
+      margin-bottom: 10px;
+    }
     .three-col{
       text-align: right;
     }
@@ -23,4 +42,41 @@
 
 .zjb{
   text-align: right;
+}
+
+.working-hours-for-staff{
+  @include total_style;
+  .working-hours-title{
+    @include box_bgcolor_and_distance;
+  }
+  .working-hours-search-box{
+    @include box_bgcolor_and_distance;
+    .query{
+      margin-top: 10px;
+      margin-left: 200px;
+    }
+  }
+  .working-hours-body{
+    @include box_bgcolor_and_distance;
+  }
+  .bottom-buttons{
+    margin-top: 20px;
+  }
+}
+
+.working-hours-approval-history{
+  @include total_style;
+  .working-hours-approval-history-title{
+    @include box_bgcolor_and_distance;
+  }
+  .working-hours-approval-history-box{
+    @include box_bgcolor_and_distance;
+    .select{
+      margin-top: 20px;
+      margin-left: 200px;
+    }
+  }
+  .working-hours-approval-history-body{
+    @include box_bgcolor_and_distance;
+  }
 }

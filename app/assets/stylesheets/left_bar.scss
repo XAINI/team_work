@@ -9,6 +9,15 @@
     color: #00C1DE;
   }
 }
+@mixin bar_to_bar_distance{
+  margin-top: 20px;
+  .title-1{
+    background-color: #42485B;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
 
 .left-bar{
   font-family: Microsoft YaHei;
@@ -24,30 +33,28 @@
   color: white;
   font-size: 18px;
   letter-spacing: 4px;
-  .tables{
-    @include target_a_style;
-  }
-  .manage_project{
-    @include target_a_style;
-  }
   .work_time{
     @include target_a_style;
+    @include bar_to_bar_distance;
   }
   .examine{
-    @include target_a_style;
-  }
-  .mine-task{
+    @include bar_to_bar_distance;
     @include target_a_style;
   }
   .projects_tasks{
+    @include bar_to_bar_distance;
     @include target_a_style;
   }
   .prijects{
+    @include bar_to_bar_distance;
     @include target_a_style;
   }
+  .tables{
+    @include target_a_style;
+    @include bar_to_bar_distance;
+  }
+  .manage_project{
+    @include target_a_style;
+    @include bar_to_bar_distance;
+  }
 }
-
-.title-1{
-  font-size: 18px;
-}
-

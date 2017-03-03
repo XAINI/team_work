@@ -1,4 +1,5 @@
 .working-hours-submit-page
+  .top-area
   .first-block
     %i.glyphicon.glyphicon-tags
     工时填报
@@ -153,33 +154,30 @@
             %input.total{type:"checkbox"}= "0"
           %th.total= "0"
 
-    .bottom-buttons
-      %button.btn.btn-primary= "新增"
-      %button.btn.btn-primary= "保存"
-      %button.btn.btn-primary= "提交"
+  .bottom-area
 
-.modal.fade.bs-example-modal-lg{tabindex: "-1", role: "dialog", aria: {labelledby: "modalLabel"}}
-  .modal-dialog.modal-lg{:role => "document"}
-    .modal-content
-      .modal-header{style:"background-color:#2B84DD;"}
-        %button.close{type: "button", data:{dismiss: "modal", global: "false" , aria: {label: "Close"}}}
-          %i.glyphicon.glyphicon-remove
-        %h4.modal-title{style:"color:white;font-family:Microsoft YaHei;font-size:18px;font-weight: bold;"} 填报工时信息
-      .modal-body
-        .form-group
-          %label.control-label= "时间类型"
-          %select.select-project
-            %option= "正常工时"
-            %option= "加班工时"
-        .form-group
-          %label.control-label= "工作内容"
-          %input.form-control{type:"text"}
-        .form-group
-          %label.control-label= "存在问题"
-          %input.form-control{type:"text"}
-        .form-group
-          %label.control-label= "拟解决措施"
-          %input.form-control{type:"text"}
-      .modal-footer
-        %button.btn.btn-primary{type: "button", data:{dismiss: "modal"}}确定
-        %button.btn.btn-default.close-modal{type: "button", data:{dismiss: "modal"}}清除
+  .modal.fade.bs-example-modal-lg{tabindex: "-1", role: "dialog", aria: {labelledby: "modalLabel"}}
+    .modal-dialog.modal-lg{:role => "document"}
+      .modal-content
+        .modal-header{style:"background-color:#2B84DD;"}
+          %button.close{type: "button", data:{dismiss: "modal", global: "false" , aria: {label: "Close"}}}
+            %i.glyphicon.glyphicon-remove
+          %h4.modal-title{style:"color:white;font-family:Microsoft YaHei;font-size:18px;font-weight: bold;"} 填报工时信息
+        .modal-body
+          .form-group
+            %label.control-label= "时间类型"
+            %select.select-project
+              %option= "正常工时"
+              %option= "加班工时"
+          .form-group
+            %label.control-label= "工作内容"
+            %input.form-control{type:"text"}
+          .form-group
+            %label.control-label= "存在问题"
+            %input.form-control{type:"text"}
+          .form-group
+            %label.control-label= "拟解决措施"
+            %input.form-control{type:"text"}
+        .modal-footer
+          %button.btn.btn-primary{type: "button", data:{dismiss: "modal"}}确定
+          %button.btn.btn-default.close-modal{type: "button", data:{dismiss: "modal"}}清除
