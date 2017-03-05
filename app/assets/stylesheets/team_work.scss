@@ -31,6 +31,16 @@
   }
 }
 
+@mixin back_list_target_style{
+  a{
+    color: #00C1DE;
+    font-size: 18px;
+  }
+  a:link{
+    text-decoration: none;
+  }
+}
+
 .event-list{
   @include gray_area_and_body_bgcolor_font_family;
   .search-box{
@@ -59,6 +69,7 @@
   height: auto;
   .page-title{
     @include box_bgcolor_and_distance;
+    @include back_list_target_style;
   }
   .event-table{
     @include box_bgcolor_and_distance;
@@ -81,6 +92,7 @@
   @include gray_area_and_body_bgcolor_font_family;
   .top-option{
     @include box_bgcolor_and_distance;
+    @include back_list_target_style;
   }
   .event-form-report{
     @include box_bgcolor_and_distance;
@@ -129,6 +141,7 @@
   @include gray_area_and_body_bgcolor_font_family;
   .total-nav{
     @include box_bgcolor_and_distance;
+    @include back_list_target_style;
   }
   .total-body{
     @include box_bgcolor_and_distance;
@@ -140,6 +153,7 @@
   @include gray_area_and_body_bgcolor_font_family;
   .evt-staff-nav{
     @include box_bgcolor_and_distance;
+    @include back_list_target_style;
   }
   .evt-staff-body{
     @include box_bgcolor_and_distance;
@@ -150,6 +164,7 @@
   @include gray_area_and_body_bgcolor_font_family;
   .evt-staff-time-nav{
     @include box_bgcolor_and_distance;
+    @include back_list_target_style;
   }
   .evt-staff-time-body{
     @include box_bgcolor_and_distance;
@@ -161,6 +176,7 @@
   @include gray_area_and_body_bgcolor_font_family;
   .dptm-evt-time-total-nav{
     @include box_bgcolor_and_distance;
+    @include back_list_target_style;
   }
   .dptm-evt-time-total-body{
     @include box_bgcolor_and_distance;
@@ -172,6 +188,7 @@
   @include gray_area_and_body_bgcolor_font_family;
   .department-staf-time-total-nav{
     @include box_bgcolor_and_distance;
+    @include back_list_target_style;
   }
   .department-staf-time-total-body{
     @include box_bgcolor_and_distance;
