@@ -80,3 +80,34 @@
     @include box_bgcolor_and_distance;
   }
 }
+
+
+.working-times-exmaine{
+  @include total_style;
+  .working-times-exmaine-title{
+    @include box_bgcolor_and_distance;
+  }
+  .working-times-exmaine-search-box{
+    @include box_bgcolor_and_distance;
+    .search-for-condition{
+      margin-top: 10px;
+      .line-two{
+        margin-top: 20px;
+      }
+    }
+  }
+  .working-times-exmaine-body{
+    @include box_bgcolor_and_distance;
+    .event-name{
+      a{
+        color: #00C1DE;
+      }
+      a:link{
+        text-decoration: none;
+      }
+      a:hover{
+        color: #FEAD4E;
+      }
+    }
+  }
+}

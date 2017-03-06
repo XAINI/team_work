@@ -47,6 +47,22 @@ class TestController < ApplicationController
     
   end
 
+  def working_times_approval
+    @event_examine_info = [
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "正常时间"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "正常时间"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "加班工时"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "加班工时"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "正常时间"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "加班工时"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "加班公司"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "正常时间"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "正常时间"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05 (星期日)", time: "8", work_type: "加班工时"}
+    ]
+
+  end
+
   private
     def real_time
       @today = Time.new.strftime("%Y年%m月%d日 %H:%M:%S")

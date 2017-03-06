@@ -1,0 +1,237 @@
+.working-times-exmaine
+  .top-area
+  .working-times-exmaine-title
+    %label{style: "font-size: 20px;"}
+      %i.glyphicon.glyphicon-pencil
+      工时审核
+  .working-times-exmaine-search-box
+    .navigator-to-other-type
+      %ul.nav.nav-tabs
+        %li{role: "presentation"} 
+          %a{href: "javascript:;"} 按日期分组
+        %li{role: "presentation"} 
+          %a{href: "javascript:;"} 按项目分组
+        %li.active{role: "presentation"} 
+          %a{href: "javascript:;"} 按员工分组
+        %li{role: "presentation"} 
+          %a{href: "javascript:;"} 工时审核历史记录
+    .search-for-condition
+      %form.form-inline
+        .line-one
+          .form-group{style: "margin-left: 35px;"}
+            %label 所属项目
+            %input.form-control{type:"text", placeholder:"例如：aa999"}
+          .form-group{style:"margin-left:100px;"}
+            %label 时间类型
+            %select.form-control
+              %option 不指定
+              %option 休假工时
+              %option 加班工时
+              %option 正常工时
+              %option{disabled: "disabled"} 
+          .form-group{style: "margin-left: 120px;"}
+            %label 审批人
+            %select.form-control
+              %option 项目经理（设计）
+              %option 所有审批人
+              %option{disabled: "disabled"} 
+        .line-two
+          .form-group
+            %label 项目开始时间
+            %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+            %input.form-control{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker"}
+          .form-group{style:"margin-left:30px;"}
+            %label 项目结束时间
+            %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+            %input.form-control{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker1"}
+          %button.btn.btn-primary{type:"submit", style: "margin-left: 40px;"} 查询
+  .working-times-exmaine-body
+    %table.table{id:"table1"}
+      %thead
+        %tr{style: "background-color: #EEEEEE;"}
+          %td
+            %input{type: "checkbox"}
+          %td
+            %span{style: "margin-right: 10px;"} 
+              %i.glyphicon.glyphicon-user 
+              普通员工(设计)
+            %span{style: "margin-right: 10px;"} 
+              %i.glyphicon.glyphicon-unchecked
+              设计部
+            %span{style: "margin-right: 10px;"} 
+              %i.glyphicon.glyphicon-exclamation-sign
+              普通行政人员
+          %th{style: "text-align: right;"} 总计: 68小时
+      %tbody
+        -@event_examine_info.each do |e|
+          -if e[:work_type] == "正常时间"
+            %tr
+              %td{style: "text-align: center;width: 5%;"}
+                %input{type: "checkbox"}
+              %td{style: "width: 30%;"} 
+                .event-name
+                  %span{style:"color: #C9C9C9;"} 项目: 
+                  %a{href:"javascript:;", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+                    =e[:event]
+                .event-date
+                  %span{style:"color: #C9C9C9;"} 日期: 
+                  %span 
+                    =e[:date]
+              %td 
+                .task-name
+                  %span{style:"color: #C9C9C9;"} 任务: 
+                  %span
+                    =e[:task]
+                .task-time
+                  %span{style:"color: #C9C9C9;"} 工时: 
+                  %span{style: "font-size: 18px;font-weight: bold;"} 
+                    =e[:time]
+                  %span 小时
+                  %span 
+                    (
+                    =e[:work_type]
+                    )
+                  %a{href: "javascript:;", style: "margin-left: 100px;"}
+                    %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/ok_24px.png"}
+                  %a{href: "javascript:;", style: "margin-left: 10px;"}
+                    %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/sign_erro.png"}
+
+          -if e[:work_type] == "加班工时"
+            %tr{style: "background-color: #FDE4D0;"}
+              %td{style: "text-align: center;width: 5%;"}
+                %input{type: "checkbox"}
+              %td{style: "width: 30%;"} 
+                .event-name
+                  %span{style:"color: #C9C9C9;"} 项目: 
+                  %a{href:"javascript:;", data:{:toggle => "modal", :target =>".bs-example-modal-lg"}}
+                    =e[:event]
+                .event-date
+                  %span{style:"color: #C9C9C9;"} 日期: 
+                  %span 
+                    =e[:date]
+              %td 
+                .task-name
+                  %span{style:"color: #C9C9C9;"} 任务: 
+                  %span
+                    =e[:task]
+                .task-time
+                  %span{style:"color: #C9C9C9;"} 工时: 
+                  %span{style: "font-size: 18px;font-weight: bold;color: #FF0000;"} 
+                    =e[:time]
+                  %span 小时
+                  %span{style: "color: #FF0000;"} 
+                    (
+                    =e[:work_type]
+                    )
+                  %a{href: "javascript:;", style: "margin-left: 100px;"}
+                    %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/ok_24px.png"}
+                  %a{href: "javascript:;", style: "margin-left: 10px;"}
+                    %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/sign_erro.png"}
+    .approval-option
+      %button.btn.btn-default
+        %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/ok_24px.png"}
+        同意
+      %button.btn.btn-default
+        %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/sign_erro.png"}
+        拒绝
+
+  .bottom-area
+  .modal.fade.bs-example-modal-lg{tabindex: "-1", role: "dialog", aria: {labelledby: "modalLabel"}}
+    .modal-dialog.modal-lg{:role => "document"}
+      .modal-content
+        .modal-header{style:"background-color:#2B84DD;"}
+          %button.close{type: "button", data:{dismiss: "modal", global: "false" , aria: {label: "Close"}}}
+            %i.glyphicon.glyphicon-remove
+          %h4.modal-title{style:"color:white;font-family:Microsoft YaHei;font-size:18px;font-weight: bold;"} 查看项目属性
+        .modal-body
+          %table.table.table-bordered{style:"height:400px;"}
+            %tr
+              %td{colspan: "4"}
+                %i.glyphicon.glyphicon-book
+                %span{style: "font-weight: bold;"} 基本信息
+
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目编号
+              %td{colspan: "3"} 00123
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目名称
+              %td{colspan: "3"}  测试项目 - mindpin
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目简称
+              %td{colspan: "3"} 
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目模式
+              %td 资源项目
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目类别 
+              %td -
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 执行部门
+              %td 设计部
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目主管
+              %td -
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目经理
+              %td Mark
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目助理
+              %td John
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 销售
+              %td -
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 客户
+              %td -
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目状态
+              %td 进行中
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 项目进度
+              %td
+                .progress
+                  .progress-bar.progress-bar-info{role:"progress", style:"color:black;width:60%;"}
+                    60%
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 币种
+              %td -
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 汇率
+              %td -
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 合同金额
+              %td 0.00
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 税后金额
+              %td 0.00
+            %tr
+              %td{colspan: "4"}
+                %i.glyphicon.glyphicon-time
+                %span{style: "font-weight: bold;"} 时间属性
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 必须开始于
+              %td -
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 必须完成于
+              %td -
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 计划开始于
+              %td 2016-02-24
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 计划完成于
+              %td 2017-02-24
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 实际开始于
+              %td -
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 实际完成于
+              %td -
+            %tr
+              %td{colspan: "4"}
+                %i.glyphicon.glyphicon-calendar
+                %span{style: "font-weight: bold;"} 创建信息
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 创建日期
+              %td 2016-02-20
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 更新日期
+              %td 2017-02-20
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 创建人
+              %td Alan
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"}
+              %td
+            %tr
+              %td{style: "background-color: #F3F3F3;font-family: Microsoft YaHei;"} 描述
+              %td{colspan:"3"}
+        .modal-footer
+          %button.btn.btn-default.close-modal{type: "button", data:{dismiss: "modal"}}关闭

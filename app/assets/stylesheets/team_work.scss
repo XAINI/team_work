@@ -43,6 +43,9 @@
 
 .event-list{
   @include gray_area_and_body_bgcolor_font_family;
+  .event-list-title{
+    @include box_bgcolor_and_distance;
+  }
   .search-box{
     @include box_bgcolor_and_distance;
     .navigator-btn{

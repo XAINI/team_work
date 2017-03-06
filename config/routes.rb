@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get :working_hours_submit
       get :working_hours_approval
       get :working_hours_approval_history
+      get :working_times_approval
       
       get :report_form_list
       get :event_detail_form_report
