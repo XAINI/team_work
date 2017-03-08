@@ -14,7 +14,7 @@
         %li.active{role: "presentation"} 
           %a{href: "javascript:;"} 按员工分组
         %li{role: "presentation"} 
-          %a{href: "javascript:;"} 工时审核历史记录
+          %a{href: "/test/working_times_approval_history"} 工时审核历史记录
     .search-for-condition
       %form.form-inline
         .line-one
@@ -65,7 +65,7 @@
       %tbody
         -@event_examine_info.each do |e|
           -if e[:work_type] == "正常时间"
-            %tr
+            %tr.display-btn
               %td{style: "text-align: center;width: 5%;"}
                 %input{type: "checkbox"}
               %td{style: "width: 30%;"} 
@@ -97,7 +97,7 @@
                     %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/sign_erro.png"}
 
           -if e[:work_type] == "加班工时"
-            %tr{style: "background-color: #FDE4D0;"}
+            %tr.display-btn{style: "background-color: #FDE4D0;"}
               %td{style: "text-align: center;width: 5%;"}
                 %input{type: "checkbox"}
               %td{style: "width: 30%;"} 

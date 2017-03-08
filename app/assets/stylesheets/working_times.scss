@@ -18,6 +18,15 @@
   }
 }
 
+@mixin box_search_condition{
+  .search-for-condition{
+    margin-top: 10px;
+    .line-two{
+      margin-top: 20px;
+    }
+  }
+}
+
 .working-hours-submit-page{
   @include total_style;
   .first-block{
@@ -40,10 +49,6 @@
   }
 }
 
-.zjb{
-  text-align: right;
-}
-
 .working-hours-for-staff{
   @include total_style;
   .working-hours-title{
@@ -64,17 +69,14 @@
   }
 }
 
-.working-hours-approval-history{
+.working-times-approval-history{
   @include total_style;
   .working-hours-approval-history-title{
     @include box_bgcolor_and_distance;
   }
   .working-hours-approval-history-box{
     @include box_bgcolor_and_distance;
-    .select{
-      margin-top: 20px;
-      margin-left: 200px;
-    }
+    @include box_search_condition;
   }
   .working-hours-approval-history-body{
     @include box_bgcolor_and_distance;
@@ -89,12 +91,7 @@
   }
   .working-times-exmaine-search-box{
     @include box_bgcolor_and_distance;
-    .search-for-condition{
-      margin-top: 10px;
-      .line-two{
-        margin-top: 20px;
-      }
-    }
+    @include box_search_condition;
   }
   .working-times-exmaine-body{
     @include box_bgcolor_and_distance;
@@ -107,6 +104,11 @@
       }
       a:hover{
         color: #FEAD4E;
+      }
+    }
+    .task-time{
+      a:link{
+        text-decoration: none;
       }
     }
   }

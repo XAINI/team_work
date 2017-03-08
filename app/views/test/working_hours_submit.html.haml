@@ -11,7 +11,7 @@
       %button.btn.btn-primary= "新增"
       %button.btn.btn-primary= "保存"
       %button.btn.btn-primary= "提交"
-    %table.table.table-hover.table-bordered
+    %table.table.table-bordered
       %thead
         %th.operations= "操 作"
         %th.operations= "所属项目"
@@ -34,14 +34,14 @@
             %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
               %i.glyphicon.glyphicon-minus
           %th
-            %select.select-project
-              %option= "请点击选择项目"
+            %select.form-control
+              %option 请点击选择项目
               %option= "项目1"
               %option= "项目2"
               %option= "项目3"
               %option= "项目4" 
           %th
-            %select.select-task
+            %select.form-control
               %option= "请点击选择具体任务"
               %option= "任务1"
               %option= "任务2"
@@ -71,14 +71,14 @@
             %a{title:"删除",href:"javascipte:;", style:'text-decoration:none;color:black;'}
               %i.glyphicon.glyphicon-minus
           %th
-            %select.select-project
+            %select.form-control
               %option= "请点击选择项目"
               %option= "项目1"
               %option= "项目2"
               %option= "项目3"
               %option= "项目4" 
           %th
-            %select.select-task
+            %select.form-control
               %option= "请点击选择具体任务"
               %option= "任务1"
               %option= "任务2"
@@ -108,14 +108,14 @@
             %a{title:"撤回",href:"javascipte:;", style:'text-decoration:none;color:black;'}
               %i.glyphicon.glyphicon-minus
           %th
-            %select.select-project
+            %select.form-control
               %option= "请点击选择项目"
               %option= "项目1"
               %option= "项目2"
               %option= "项目3"
               %option= "项目4" 
           %th
-            %select.select-task
+            %select.form-control
               %option= "请点击选择具体任务"
               %option= "任务1"
               %option= "任务2"

@@ -39,12 +39,19 @@ class TestController < ApplicationController
     
   end
 
-  def working_hours_approval
-    
-  end
-
-  def working_hours_approval_history
-    
+  def working_times_approval_history
+    @event_approval_history = [
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "8", work_type: "正常时间", proposer: "staff01", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "已批准", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "8", work_type: "正常时间", proposer: "staff04", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "已批准", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "6", work_type: "加班工时", proposer: "staff03", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "未通过", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "7", work_type: "加班工时", proposer: "staff07", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "已批准", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "4", work_type: "加班工时", proposer: "staff04", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "未通过", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "5", work_type: "加班工时", proposer: "staff03", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "已批准", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "8", work_type: "正常时间", proposer: "staff04", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "已批准", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "8", work_type: "正常时间", proposer: "staff05", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "未通过", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "3", work_type: "加班工时", proposer: "staff06", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "已批准", content:"--"},
+      {event: " 测试项目 - mindpin", task: "压力测试", date: "2017-03-05", time: "5", work_type: "加班工时", proposer: "staff02", commit_time: "2017-03-06", approval_time: "2017-03-07", status: "未通过", content:"--"}
+    ]
   end
 
   def working_times_approval

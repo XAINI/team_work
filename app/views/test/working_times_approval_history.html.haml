@@ -1,0 +1,135 @@
+.working-times-approval-history
+  .top-area
+  .working-hours-approval-history-title
+    %label{style: "font-size: 20px;"}
+      %i.glyphicon.glyphicon-pencil
+      工时审核历史记录
+  .working-hours-approval-history-box
+    .navigator-to-other-type
+      %ul.nav.nav-tabs
+        %li{role: "presentation"} 
+          %a{href: "javascript:;"} 按日期分组
+        %li{role: "presentation"} 
+          %a{href: "javascript:;"} 按项目分组
+        %li{role: "presentation"} 
+          %a{href: "/test/working_times_approval"} 按员工分组
+        %li.active{role: "presentation"} 
+          %a{href: "javascript:;"} 工时审核历史记录
+    .search-for-condition
+      %form.form-inline
+        .line-one
+          .form-group{style: "margin-left: 35px;"}
+            %label 所属项目
+            %input.form-control{type:"text", placeholder:"例如：aa999"}
+          .form-group{style:"margin-left:100px;"}
+            %label 时间类型
+            %select.form-control
+              %option 不指定
+              %option 休假工时
+              %option 加班工时
+              %option 正常工时
+              %option{disabled: "disabled"} 
+          .form-group{style: "margin-left: 120px;"}
+            %label 申请人
+            %select.form-control
+              %option
+              %option staff01
+              %option staff02
+              %option staff03
+              %option staff04
+              %option staff05
+              %option staff06
+              %option staff07
+              %option{disabled: "disabled"} 
+        .line-two
+          .form-group
+            %label 工时开始时间
+            %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+            %input.form-control{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker"}
+          .form-group{style:"margin-left:65px;"}
+            %label 结束时间
+            %i.glyphicon.glyphicon-calendar{style: "z-index:2;position:relative;left:5px;"}
+            %input.form-control{style: "padding-left: 30px; position: relative; left: -20px;",type: "text", value: "2017-02-27 21:05",id: "datetimepicker1"}
+          %button.btn.btn-primary{type:"submit", style: "margin-left: 40px;"} 查询
+  .working-hours-approval-history-body
+    %table.table.table-hover
+      %thead
+        %tr{style: "background-color: #EAEAEA;"}
+          %td 操作
+          %td 日期
+          %td 填报人
+          %td 提交时间
+          %td 审批状态
+          %td 审批时间
+          %td 工时（小时）
+          %td 时间类型
+          %td 备注
+          %td 所属项目
+          %td 所属任务
+      %tbody
+        -@event_approval_history.each do |eph|
+          -if eph[:work_type] == "正常时间"
+            %tr
+              %td -
+              %td 
+                = eph[:date]
+              %td 
+                = eph[:proposer]
+              %td 
+                = eph[:commit_time]
+              %td 
+                %span
+                  -if eph[:status] == "已批准"
+                    %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/ok_16px.png"}
+                  -if eph[:status] == "未通过"
+                    %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/Error_16px.png"}
+                  = eph[:status]
+              %td 
+                = eph[:approval_time]
+              %td 
+                = eph[:time]
+              %td 
+                = eph[:work_type]
+              %td 
+                = eph[:content]
+              %td 
+                = eph[:event]
+              %td 
+                = eph[:task]
+          -if eph[:work_type] == "加班工时"
+            %tr
+              %td -
+              %td 
+                = eph[:date]
+              %td 
+                = eph[:proposer]
+              %td 
+                = eph[:commit_time]
+              %td 
+                %span
+                  -if eph[:status] == "已批准"
+                    %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/ok_16px.png"}
+                  -if eph[:status] == "未通过"
+                    %img{src: "http://7xsd7r.com1.z0.glb.clouddn.com/Error_16px.png"}
+                  = eph[:status]
+              %td 
+                = eph[:approval_time]
+              %td 
+                %span{style: "color: #FF0000;"} 
+                  = eph[:time]
+              %td
+                %span{style: "color: #FF0000;"} 
+                  = eph[:work_type]
+              %td 
+                = eph[:content]
+              %td 
+                = eph[:event]
+              %td 
+                = eph[:task]
+            
+        
+      %tfoot
+        %tr{style: "background-color: #EAEAEA;"}
+          %th{colspan:"5", style: "text-align: right;font-size:18px;"} 总计:
+          %th{colspan:"6", style: "font-size:18px;"} 24
+  .bottom-area
